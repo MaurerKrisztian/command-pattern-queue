@@ -1,0 +1,24 @@
+{
+  "name": "command-pattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev app.ts",
+    "test": "jest --silent --verbose --coverage",
+    "build": "tsc -p ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
+    "ts-node-dev": "^1.0.0-pre.52",
+    "@types/node": "^14.0.23",
+    "nodemon": "^2.0.7",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
