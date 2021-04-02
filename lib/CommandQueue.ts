@@ -3,7 +3,6 @@ import {ICommand} from "./ICommand";
 export class CommandQueue {
     executed: ICommand[] = [];
     redo: ICommand[] = [];
-    locked = false;
 
     async executeCommand(command: ICommand) {
         await command.execute();
@@ -16,26 +15,9 @@ export class CommandQueue {
         }
     }
 
-    async waitForUnlock(ms: number) {
-        if (!this.locked) return
 
-        const start = new Date().getTime();
-        let time = 0;
 
-        while (time < ms) {
-            if (!this.locked) {
-                return;
-            }
-            const end = new Date().getTime();
-            time = end - start;
-        }
-        throw new Error(`timeout ${ms} ms. The queue is locked.`)
-    }
-
-    async undoCommand(numberOfCommands: number = 1, timeout: number = 1000): Promise<void> {
-        await this.waitForUnlock(timeout)
-
-        this.locked = true;
+    async undoCommand(numberOfCommands: number = 1): Promise<void> {
 
         if (this.getMaxUndo() < numberOfCommands) {
             throw new Error(`Maximum undo commands is ${this.getMaxRedo()}, you try to undo ${numberOfCommands}`);
@@ -49,14 +31,10 @@ export class CommandQueue {
             this.redo.push(this.executed[this.executed.length - 1])
             this.executed.pop();
         }
-
-        this.locked = false;
     }
 
-    async redoCommand(numberOfCommands: number = 1, timeout: number = 1000): Promise<void> {
-        await this.waitForUnlock(timeout)
+    async redoCommand(numberOfCommands: number = 1): Promise<void> {
 
-        this.locked = true;
         if (this.getMaxRedo() < numberOfCommands) {
             throw new Error(`Reduable commands is ${this.getMaxRedo()}, you try to redo ${numberOfCommands}`);
         }
@@ -65,11 +43,10 @@ export class CommandQueue {
             if (this.executed.length == 0) {
                 throw new Error("there is no reduable command");
             }
-            await this.executed[this.executed.length - 1].execute()
+            await this.redo[this.redo.length - 1].execute()
             this.executed.push(this.executed[this.executed.length - 1])
             this.redo.pop();
         }
-        this.locked = false;
     }
 
     getMaxUndo(): number {
