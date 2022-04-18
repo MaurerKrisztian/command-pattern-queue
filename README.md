@@ -11,7 +11,7 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
 
 
-# command-pattern-queue
+# command-pattern-queue [![npm version](https://badge.fury.io/js/command-pattern-queue.svg)](https://badge.fury.io/js/command-pattern-queue)
 
 ### Basic implementation of command-pattern queue
 
