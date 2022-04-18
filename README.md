@@ -1,8 +1,24 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=bugs)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=MaurerKrisztian_command-pattern-queue&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=MaurerKrisztian_command-pattern-queue)
+
+
 # command-pattern-queue
 
 ### Basic implementation of command-pattern queue
 
 ## Usage:
+```
+npm i command-pattern-queue
+```
 
 ```typescript
 // command interface
